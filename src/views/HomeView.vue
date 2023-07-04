@@ -4,7 +4,7 @@
   <main id="MainContent" class="md:p-4">
     <div class="flex flex-col mt-20">
       <h4 class="text-4xl text-text uppercase font-semibold">Populares</h4>
-      <div :class="`${!loading ? 'h-[15rem] flex justify-center items-center' : 'flex flex-col md:flex-row md:overflow-x-scroll gap-4 px-6 md:px-16 py-6'}`">
+      <div :class="`${!loading ? 'h-[15rem] flex justify-center items-center' : 'flex flex-col md:flex-row md:overflow-x-scroll lg:overflow-x-hidden gap-4 px-6 md:px-16 py-6'}`">
         <Loader v-if="!loading" />
         <Card v-else v-for="producto in productos" :producto="producto" :key="producto.id" />
       </div>
