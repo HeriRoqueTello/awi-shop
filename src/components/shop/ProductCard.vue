@@ -18,7 +18,7 @@
         <p class="mt-2">
           <span class="sr-only"> Regular Price </span>
   
-          <span class="tracking-wider text-gray-900"> ${{ producto.price }} </span>
+          <span class="tracking-wider text-gray-900">S/ {{ producto.price }} </span>
         </p>
       </div>
     </RouterLink>

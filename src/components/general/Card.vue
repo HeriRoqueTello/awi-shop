@@ -37,7 +37,7 @@
 
       <h3 class="mt-4 text-lg font-medium text-gray-900 line-clamp-2">{{ producto.title }}</h3>
 
-      <p class="mt-1.5 text-sm text-gray-700">${{ producto.price }}</p>
+      <p class="mt-1.5 text-sm text-gray-700">S/ {{ producto.price }}</p>
 
       <!-- <form class="mt-4">
         <button

@@ -29,7 +29,7 @@
     <div class="lg:flex lg:items-end lg:justify-between">
       <div>
         <div class="flex justify-center text-primary lg:justify-start text-4xl">
-          AwiShop
+          ÑawiShop
         </div>
 
         <p
