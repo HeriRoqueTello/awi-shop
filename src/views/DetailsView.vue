@@ -98,7 +98,7 @@
             </fieldset>
 
             <div>
-              <p class="text-xl font-bold">${{ producto.price }}</p>
+              <p class="text-xl font-bold">S/ {{ producto.price }}</p>
             </div>
 
             <button
