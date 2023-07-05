@@ -35,8 +35,7 @@
         <p
           class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left"
         >
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-          consequuntur amet culpa cum itaque neque.
+        Agradecemos tu visita a ÑawiShop y esperamos que disfrutes navegando por nuestra tienda en línea. Si tienes alguna pregunta o necesitas asistencia, nuestro amable equipo de atención al cliente está listo para ayudarte. ¡Felices compras en ÑawiShop, tu destino favorito para encontrar productos de calidad y estilo!
         </p>
       </div>
 

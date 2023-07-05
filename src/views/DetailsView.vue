@@ -25,7 +25,7 @@
 
         <div class="lg:sticky lg:top-0">
           <form class="space-y-4 lg:pt-8">
-            <fieldset>
+            <!-- <fieldset>
               <legend class="text-lg font-bold">Color</legend>
 
               <div class="mt-2 flex flex-wrap gap-1">
@@ -95,8 +95,11 @@
                   ></span>
                 </label>
               </div>
-            </fieldset>
-
+            </fieldset> -->
+            <div>
+              <p class="text-xl">Stock: <span class="text-xl font-bold">{{ producto.count }}</span> </p>
+              
+            </div>
             <div>
               <p class="text-xl font-bold">S/ {{ producto.price }}</p>
             </div>
@@ -134,7 +137,7 @@
 import Navbar from '@/components/general/Navbar.vue'
 import FooterComponent from '@/components/general/Footer.vue'
 import Loader from '@/components/general/Loader.vue'
-import fakeApi from '@/api/fakeApi';
+import productsApi from '@/api/productsApi';
 
 export default{
   data(){
@@ -145,7 +148,7 @@ export default{
   },
   methods: {
     async getProduct() {
-      const { data } = await fakeApi.get(`/${this.$route.params.id}`)
+      const { data } = await productsApi.get(`/${this.$route.params.id}`)
       this.producto = data
       this.loading = true
     }

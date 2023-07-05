@@ -1,23 +1,51 @@
-<!-- eslint-disable vue/multi-word-component-names -->
-<template>
-  <header>
-    <nav class="h-16 flex flex-row bg-secondary justify-center gap-4 items-center font-semibold font-roboto">
-      <RouterLink :class="`${path === 'home' && 'text-primary'} hover:text-primary transition duration-300 ease-in-out`" to="/">Inicio</RouterLink>
-      <RouterLink :class="`${path === 'electronicos' && 'text-primary'} hover:text-primary transition duration-300 ease-in-out`" to="/electronicos">Electronicos</RouterLink>
-      <RouterLink :class="`${path === 'ropa' && 'text-primary'} hover:text-primary transition duration-300 ease-in-out`" to="/ropa">Ropa</RouterLink>
-      <RouterLink :class="`${path === 'joyeria' && 'text-primary'} hover:text-primary transition duration-300 ease-in-out`" to="/joyeria">Joyerias</RouterLink>
-    </nav>
-  </header>
-</template>
-<script>
-export default {
-  data() {
-    return {
-      path: this.$route.name
-    }
-  }
-}
+<script setup lang="ts">
+import {
+  TheDropDownNavbar,
+  TheDropDownMenu,
+  TheDropDownItem,
+  TheDropDownDivideBlock,
+} from "vue3-dropdown-navbar";
+import { ref } from "vue";
+
+const dropdownMenu = ref<InstanceType<typeof TheDropDownMenu>>();
 </script>
-<style>
-  
-</style>
+
+<template>
+  <TheDropDownNavbar>
+    <template #logo>
+      <TheDropDownNavbarLogo>ÑawiShop</TheDropDownNavbarLogo>
+    </template>
+    <TheDropDownItem link="/">Home</TheDropDownItem>
+    <TheDropDownMenu text="Ropa" ref="dropdownMenu">
+      <TheDropDownItem :native="true" link="/subcategoria/mujeres">Mujeres</TheDropDownItem>
+      <TheDropDownItem :native="true" link="/subcategoria/hombres">Hombres</TheDropDownItem>
+      <TheDropDownItem :native="true" link="/subcategoria/bebes">Bebes</TheDropDownItem>
+      <TheDropDownDivideBlock>
+        <TheDropDownItem :native="true" link="/categoria/ropa">Ver todo</TheDropDownItem>
+      </TheDropDownDivideBlock>
+    </TheDropDownMenu>
+    <TheDropDownMenu text="Electrohogar" ref="dropdownMenu">
+      <TheDropDownItem :native="true" link="/subcategoria/cocina">Cocina</TheDropDownItem>
+      <TheDropDownItem :native="true" link="/subcategoria/muebles">Muebles</TheDropDownItem>
+      <TheDropDownDivideBlock>
+        <TheDropDownItem link="/categoria/electrohogar" :native="true">Ver todo</TheDropDownItem>
+      </TheDropDownDivideBlock>
+    </TheDropDownMenu>
+    <TheDropDownMenu text="Tecnologia" ref="dropdownMenu">
+      <TheDropDownItem :native="true" link="/subcategoria/celulares">Celulares</TheDropDownItem>
+      <TheDropDownItem :native="true" link="/subcategoria/accesorios">Accesorios</TheDropDownItem>
+      <TheDropDownItem :native="true" link="/subcategoria/computadoras">Computadoras</TheDropDownItem>
+      <TheDropDownDivideBlock>
+        <TheDropDownItem link="/categoria/tecnologia" :native="true">Ver todo</TheDropDownItem>
+      </TheDropDownDivideBlock>
+    </TheDropDownMenu>
+    <TheDropDownMenu text="Otros" ref="dropdownMenu">
+      <TheDropDownItem :native="true" link="/subcategoria/libros">Libros</TheDropDownItem>
+      <TheDropDownItem :native="true" link="/subcategoria/mascotas">Mascotas</TheDropDownItem>
+      <TheDropDownItem :native="true" link="/subcategoria/supermercado">Supermercado</TheDropDownItem>
+      <TheDropDownDivideBlock>
+        <TheDropDownItem :native="true" link="/categoria/otros">Ver todo</TheDropDownItem>
+      </TheDropDownDivideBlock>
+    </TheDropDownMenu>
+  </TheDropDownNavbar>
+</template>

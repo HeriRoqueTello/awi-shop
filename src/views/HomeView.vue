@@ -30,7 +30,7 @@ import Navbar from '@/components/general/Navbar.vue'
 import FooterComponent from '@/components/general/Footer.vue'
 import Loader from '@/components/general/Loader.vue'
 import Card from '@/components/general/Card.vue'
-import fakeApi from '@/api/fakeApi';
+import productsApi from '@/api/productsApi';
 
 export default{
   data(){
@@ -55,8 +55,13 @@ export default{
       return array;
     },
     async getProducts() {
-      const { data } = await fakeApi.get()
-      this.productos = this.shuffle(data).slice(1,5)
+      const { data } = await productsApi.get()
+      console.log(data);
+      if(data.length < 5){
+        this.productos = data
+      } else {
+        this.productos = this.shuffle(data).slice(1,5)
+      }
       this.loading = true
     }
   },

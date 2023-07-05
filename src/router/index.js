@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import CategoryView from '../views/CategoryView.vue'
+import SubcategoryView from '../views/SubcategoryView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,24 +20,29 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
-      path: '/electronicos',
-      name: 'electronicos',
-      component: () => import('../views/ElectronicosView.vue')
-    },
-    {
       path: '/ropa',
       name: 'ropa',
       component: () => import('../views/RopaView.vue')
     },
     {
-      path: '/joyeria',
-      name: 'joyeria',
-      component: () => import('../views/JoyeriaView.vue')
-    },
-    {
       path: '/producto/:id',
       name: 'detalles',
       component: () => import('../views/DetailsView.vue')
+    },
+    {
+      path: '/categoria/:name',
+      name: 'categoria',
+      component: CategoryView
+    },
+    {
+      path: '/subcategoria/:name',
+      name: 'subcategoria',
+      component: SubcategoryView
+    },
+    {
+      path: '/create',
+      name: 'create',
+      component: () => import('../views/CreateView.vue')
     },
   ]
 })
