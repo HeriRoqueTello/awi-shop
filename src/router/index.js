@@ -35,7 +35,7 @@ const router = createRouter({
       component: CategoryView
     },
     {
-      path: '/subcategoria/:name',
+      path: '/subcategoria/:category/:name',
       name: 'subcategoria',
       component: SubcategoryView
     },

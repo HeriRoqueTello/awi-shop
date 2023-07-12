@@ -55,7 +55,7 @@
       // folder: "user_images", //upload files to the specified folder
       // tags: ["users", "profile"], //add the given tags to the uploaded files
       // context: {alt: "user_uploaded"}, //add the given context data to the uploaded files
-      clientAllowedFormats: ["png", "jpg", "jfif", "gif", "jpgeg"], //restrict uploading to image files only
+      clientAllowedFormats: ["png", "jpg", "jfif", "gif", "jpgeg", "webp"], //restrict uploading to image files only
       maxImageFileSize: 10000000,  //restrict file size to less than 2MB
       // maxImageWidth: 2000, //Scales the image down to a width of 2000 pixels before uploading
       // theme: "purple", //change to a purple theme
@@ -66,9 +66,9 @@
         document.getElementById('imgsrc').value = result.info.secure_url
         document.getElementById("upload_widget").disabled = true
 
-        document
-          .getElementById("uploadedimage")
-          .setAttribute("src", result.info.secure_url);
+        // document
+        //   .getElementById("uploadedimage")
+        //   .setAttribute("src", result.info.secure_url);
       }
     }
   );
@@ -100,17 +100,26 @@
       },
       loadSubcategoria() {
         switch (this.category) {
-          case 'ropa':
+          case 'mujer':
             this.subcategorias = this.categorias[0].subcategorias
             break;
-          case 'electrohogar':
+          case 'varones':
             this.subcategorias = this.categorias[1].subcategorias
             break;
-          case 'tecnologia':
+          case 'ninos':
             this.subcategorias = this.categorias[2].subcategorias
             break;
-          case 'otros':
+          case 'mascota':
             this.subcategorias = this.categorias[3].subcategorias
+            break;
+          case 'joyas-y-accesorios':
+            this.subcategorias = this.categorias[4].subcategorias
+            break;
+          case 'adornos':
+            this.subcategorias = this.categorias[5].subcategorias
+            break;
+          case 'salud-y-belleza':
+            this.subcategorias = this.categorias[6].subcategorias
             break;
           default:
             break;

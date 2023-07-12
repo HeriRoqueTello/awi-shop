@@ -4,7 +4,7 @@
     <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
       <header class="text-center">
         <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
-          Subcategoria {{ path }}
+          Subcategoria {{ path }} de {{ category }}
         </h2>
 
         <p v-if="vacio" class="max-w-md mx-auto mt-4 min-h-[calc(100vh-592px)] text-gray-500">
@@ -33,6 +33,7 @@ export default{
       productos: null,
       loading: false,
       path: null,
+      category: null,
       vacio: false,
     }
   },
@@ -52,10 +53,11 @@ export default{
   },
   created(){
     this.path = this.$route.params.name;
+    this.category = this.$route.params.category;
     this.getProducts()
   },
   mounted(){
-    console.log(this.$route.params.name);
+    console.log(this.$route.params);
   },
   components: {
     Navbar,
