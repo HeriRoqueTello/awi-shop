@@ -6,7 +6,10 @@
       <input class="py-3 px-4 border-cyan-400 text-black" type="text" v-model="title" placeholder="Nombre del producto" required>
       <input class="py-3 px-4 border-cyan-400 text-black" type="number" v-model="price" placeholder="Precio" required>
       <textarea class="md:col-span-2 p-4 resize-none text-black" v-model="description" cols="30" rows="10" placeholder="Descripcion del producto" required></textarea>
-      <input class="py-3 px-4 border-cyan-400 text-black" type="url" v-model="image" placeholder="URL de la imagen" required>
+      <button type="button" @click="open" id="upload_widget" class="py-3 px-4 border bg-cyan-300 border-cyan-900 text-black">
+        Subir imagen
+      </button>
+      <input type="hidden" name="src" id="imgsrc">
       <input class="py-3 px-4 border-cyan-400 text-black" type="number" v-model="count" placeholder="Productos disponibles" required>
       <select @change="loadSubcategoria" class="py-3 px-4 border-cyan-400 capitalize text-black" v-model="category" name="category" id="category">
         <option value="no-select" disabled>Categoria</option>
@@ -23,13 +26,56 @@
           </RouterLink>
       </div>
     </form>
+    <div>
+      
+    </div>
   </div>
 </template>
   
 <script>
   import axios from 'axios';
+  const cloudName = "dlsqr4a8l"; // replace with your own cloud name
+  const uploadPreset = "nawi-shop"; // replace with your own upload preset
 
+  // Remove the comments from the code below to add
+  // additional functionality.
+  // Note that these are only a few examples, to see
+  // the full list of possible parameters that you
+  // can add see:
+  //   https://cloudinary.com/documentation/upload_widget_reference
+
+  const myWidget = cloudinary.createUploadWidget(
+    {
+      cloudName: cloudName,
+      uploadPreset: uploadPreset,
+      // cropping: true, //add a cropping step
+      // showAdvancedOptions: true,  //add advanced options (public_id and tag)
+      // sources: [ "local", "url"], // restrict the upload sources to URL and local files
+      multiple: false,  //restrict upload to a single file
+      // folder: "user_images", //upload files to the specified folder
+      // tags: ["users", "profile"], //add the given tags to the uploaded files
+      // context: {alt: "user_uploaded"}, //add the given context data to the uploaded files
+      clientAllowedFormats: ["png", "jpg", "jfif", "gif", "jpgeg"], //restrict uploading to image files only
+      maxImageFileSize: 10000000,  //restrict file size to less than 2MB
+      // maxImageWidth: 2000, //Scales the image down to a width of 2000 pixels before uploading
+      // theme: "purple", //change to a purple theme
+    },
+    (error, result) => {
+      if (!error && result && result.event === "success") {
+        console.log("Done! Here is the image info: ", result.info);
+        document.getElementById('imgsrc').value = result.info.secure_url
+        document.getElementById("upload_widget").disabled = true
+
+        document
+          .getElementById("uploadedimage")
+          .setAttribute("src", result.info.secure_url);
+      }
+    }
+  );
   export default {
+    components: {
+      // VueFileBase64
+    },
     data() {
       return {
         title: null,
@@ -40,7 +86,10 @@
         image: null,
         count: null,
         categorias: null,
-        subcategorias: null
+        subcategorias: null,
+        open: function () {
+          myWidget.open();
+        },
       };
     },
     methods: {
@@ -70,6 +119,7 @@
         // console.log(this.subcategorias);        
       },
       enviarDatos() {
+        this.image = document.getElementById("imgsrc").value
         const data = {
           title: this.title,
           price: this.price,
