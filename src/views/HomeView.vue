@@ -30,6 +30,7 @@
 
 <script>
 import Navbar from '@/components/general/Navbar.vue'
+import Register from '@/components/general/Register.vue'
 import FooterComponent from '@/components/general/Footer.vue'
 import Loader from '@/components/general/Loader.vue'
 import Card from '@/components/general/Card.vue'
@@ -75,7 +76,8 @@ export default{
     Navbar,
     Card,
     FooterComponent,
-    Loader
+    Loader,
+    Register
   }
 }
 </script>
