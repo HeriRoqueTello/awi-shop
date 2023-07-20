@@ -86,7 +86,7 @@
             </p>
           </div>
 
-          <form action="#" class="mt-8 grid grid-cols-6 gap-6">
+          <form class="mt-8 grid grid-cols-6 gap-6">
             <div class="col-span-6 sm:col-span-3">
               <label
                 for="FirstName"
@@ -181,6 +181,7 @@
 
             <div class="col-span-6 sm:flex sm:items-center sm:gap-4">
               <button
+                type="button"
                 class="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
               >
                 Registrate
