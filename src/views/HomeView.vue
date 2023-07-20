@@ -15,6 +15,9 @@
         <img src="https://static.wixstatic.com/media/29114a8fc6c5427abac0869617d2c0f5.jpg/v1/fill/w_921,h_700,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_auto/29114a8fc6c5427abac0869617d2c0f5.jpg" alt="">
       </div>
     </div>
+    <div>
+      <Register />
+    </div>
     <div class="space-y-8 text-center my-16">
       <h2 class="font-poppins font-semibold text-4xl">LLÁMANOS</h2>
       <p>Av. la Marina, San Miguel, Perú</p>
