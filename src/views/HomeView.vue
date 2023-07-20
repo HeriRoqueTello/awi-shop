@@ -9,12 +9,6 @@
         <Card v-else v-for="producto in productos" :producto="producto" :key="producto.id" />
       </div>
     </div>
-    <div class="grid md:grid-cols-2 mt-16">
-      <div class="bg-secondary hidden md:block"></div>
-      <div>
-        <img src="https://static.wixstatic.com/media/29114a8fc6c5427abac0869617d2c0f5.jpg/v1/fill/w_921,h_700,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_auto/29114a8fc6c5427abac0869617d2c0f5.jpg" alt="">
-      </div>
-    </div>
     <div>
       <Register />
     </div>
