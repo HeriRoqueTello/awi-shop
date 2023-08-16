@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1>Política de Entrega:</h1>
+  <div class="p-4 space-y-2">
+    <h1 class="text-3xl font-bold mb-2">Política de Entrega:</h1>
 
     <p>
       1. Plazos de entrega: El tiempo estimado de entrega para los productos

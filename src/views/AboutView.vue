@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    <h1>Política de Devoluciones:</h1>
+  <div class="p-4 space-y-2">
+    <h1 class="text-3xl font-bold mb-2">Política de Devoluciones:</h1>
 
     <p>
       1. Plazo de devolución: Los clientes pueden solicitar la devolución de un
