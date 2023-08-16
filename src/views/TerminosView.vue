@@ -1,6 +1,6 @@
 <template>
   <div class="p-4">
-    <h1 class="text-1xl font-bold">Términos y Condiciones de Uso de la Plataforma de Tiendas Virtuales</h1>
+    <h1 class="text-3xl font-bold mb-2">Términos y Condiciones de Uso de la Plataforma de Tiendas Virtuales</h1>
 
     <small>Última actualización: 16/08/23</small>
 
@@ -11,7 +11,7 @@
       estos Términos. Si no está de acuerdo con alguno de los Términos, le
       recomendamos que no utilice la Plataforma.
     </p>
-    <h3 class="text-lg font-semibold">1. Uso de la Plataforma</h3>
+    <h3 class="text-lg font-semibold mt-2">1. Uso de la Plataforma</h3>
     <p>
       1.1. El acceso y uso de la Plataforma están sujetos a los presentes
       Términos y a todas las leyes y regulaciones aplicables.
@@ -22,7 +22,7 @@
       su cuenta.
     </p>
 
-    <h3 class="text-lg font-semibold">2. Registro de Cuenta</h3>
+    <h3 class="text-lg font-semibold mt-2">2. Registro de Cuenta</h3>
 
     <p>
       2.1. Para acceder y utilizar ciertas funciones de la Plataforma, debe
@@ -33,7 +33,7 @@
       2.2. Usted acepta proporcionar información precisa y completa durante el
       proceso de registro y mantener su información actualizada.
     </p>
-    <h3 class="text-lg font-semibold">3. Propiedad Intelectual</h3>
+    <h3 class="text-lg font-semibold mt-2">3. Propiedad Intelectual</h3>
 
     <p>
       3.1. Todos los derechos de propiedad intelectual relacionados con la
@@ -46,7 +46,7 @@
       escrito.
     </p>
 
-    <h3 class="text-lg font-semibold">4. Productos y Transacciones</h3>
+    <h3 class="text-lg font-semibold mt-2">4. Productos y Transacciones</h3>
     <p>
       4.1. La Plataforma permite a los vendedores listar productos para la
       venta. Los vendedores son responsables de la precisión y veracidad de la
@@ -58,7 +58,7 @@
       garantía de los productos.
     </p>
 
-    <h3 class="text-lg font-semibold">5. Privacidad y Protección de Datos</h3>
+    <h3 class="text-lg font-semibold mt-2">5. Privacidad y Protección de Datos</h3>
 
     <p>
       5.1. La recopilación y uso de información personal se rige por nuestra
@@ -66,21 +66,21 @@
       cree su cuenta.
     </p>
 
-    <h3 class="text-lg font-semibold">6. Devoluciones y Reembolsos</h3>
+    <h3 class="text-lg font-semibold mt-2">6. Devoluciones y Reembolsos</h3>
 
     <p>
       6.1. Las políticas de devolución y reembolso son establecidas por nuestra
       Política de Devolución y Reembolso.
     </p>
 
-    <h3 class="text-lg font-semibold">7. Medios de Pago</h3>
+    <h3 class="text-lg font-semibold mt-2">7. Medios de Pago</h3>
 
     <p>
       7.1. Los pagos se procesan a través de métodos seguros y confiables. Usted
       acepta los términos y condiciones de los proveedores de servicios de pago.
     </p>
 
-    <h3 class="text-lg font-semibold">8. Garantía</h3>
+    <h3 class="text-lg font-semibold mt-2">8. Garantía</h3>
 
     <p>
       8.1. Los vendedores son responsables de las garantías ofrecidas en sus
@@ -88,14 +88,14 @@
       la Plataforma.
     </p>
 
-    <h3 class="text-lg font-semibold">9. Cancelación y Suspensión</h3>
+    <h3 class="text-lg font-semibold mt-2">9. Cancelación y Suspensión</h3>
 
     <p>
       9.1. Ñawi Shop se reserva el derecho de cancelar o suspender cuentas que
       incumplan estos Términos o que violen las leyes y regulaciones aplicables.
     </p>
 
-    <h3 class="text-lg font-semibold">10. Modificaciones de Términos</h3>
+    <h3 class="text-lg font-semibold mt-2">10. Modificaciones de Términos</h3>
 
     <p>
       10.1. Ñawi Shop se reserva el derecho de modificar estos Términos en
@@ -103,7 +103,7 @@
       publicación en la Plataforma.
     </p>
 
-    <h3 class="text-lg font-semibold">11. Ley Aplicable y Jurisdicción</h3>
+    <h3 class="text-lg font-semibold my-2">11. Ley Aplicable y Jurisdicción</h3>
 
     <p>
       11.1. Estos Términos se rigen por las leyes de la República del Perú.
