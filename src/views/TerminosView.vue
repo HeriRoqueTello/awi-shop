@@ -1,6 +1,9 @@
 <template>
   <div class="p-4">
-    <h1 class="text-3xl font-bold mb-2">Términos y Condiciones de Uso de la Plataforma de Tiendas Virtuales</h1>
+    <div class="text-right">
+        <a href="https://nawistore.vercel.app/" class="bg-emerald-300 px-6 py-2 rounded font-semibold">Volver</a>
+    </div>
+    <h1 class="text-3xl font-bold my-2">Términos y Condiciones de Uso de la Plataforma de Tiendas Virtuales</h1>
 
     <small>Última actualización: 16/08/23</small>
 
