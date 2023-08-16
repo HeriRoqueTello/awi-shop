@@ -1,6 +1,6 @@
 <template>
   <div class="p-4 space-y-2">
-    <a href="https://nawistore.vercel.app/" class="bg-green-400 px-4 py-3">Volver</a>
+    <a href="https://nawistore.vercel.app/" class="bg-green-300 px-6 py-2 rounded text-white text-left">Volver</a>
     <h1 class="text-3xl font-bold mb-2">Política de Entrega:</h1>
 
     <p>
